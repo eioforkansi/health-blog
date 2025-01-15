@@ -28,11 +28,11 @@ export const Navbar = () => {
           <Link to="/?cat=food">
             <h6>FOOD</h6>
           </Link>
-          <span>Emeka</span>
-          <span>Logout</span>
-          <span className="user">
+          <span className="write-post">
             <Link to="/write">Write</Link>
           </span>
+          <span>Logout</span>
+          <span>Emeka</span>
         </div>
       </div>
     </div>

@@ -104,6 +104,19 @@ $bg: rgb(216, 209, 209);
             cursor: pointer;
           }
         }
+
+        .write-post {
+          background-color: $bg;
+          padding: 8px;
+          border-radius: 10px;
+          font-weight: 300;
+          border: 1px solid white;
+
+          &:hover {
+            background-color: white;
+            border: 1px solid $bg;
+          }
+        }
       }
     }
   }
