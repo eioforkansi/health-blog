@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// $bg: #b9e7e7;
+$bg: rgb(216, 209, 209);
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", serif;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .container {
+    width: 1024px;
+
+    // Login & Register
+    .authentication {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: $bg;
+
+      h1 {
+        font-size: 20px;
+        color: teal;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        background-color: white;
+        width: 300px;
+        gap: 20px;
+        border-radius: 10px;
+      }
+
+      input {
+        // border: none;
+        // border-bottom: 1px solid gray;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: teal;
+        color: white;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 12;
+        text-align: center;
+        color: red;
+      }
+
+      span {
+        font-size: 12;
+        text-align: center;
+      }
+    }
+
+    // Navbar
+    .navbar {
+      .container {
+        padding: 10px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .links {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          h6 {
+            font-weight: 300;
+            font-size: 15px;
+          }
+
+          span {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
