@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
-import { Post } from "./pages/Post";
+import { Single } from "./pages/Single";
 import { Write } from "./pages/Write";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
@@ -26,7 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
-              <Route path="/post/:id" element={<Post />} />
+              <Route path="/post/:id" element={<Single />} />
               <Route path="/write" element={<Write />} />
             </Route>
             <Route path="/login" element={<Login />} />
