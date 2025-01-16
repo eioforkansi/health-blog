@@ -28,7 +28,7 @@ export const Navbar = () => {
           <Link to="/?cat=food">
             <h6>FOOD</h6>
           </Link>
-          <span className="write-post">
+          <span className="write-navbar">
             <Link to="/write">Write</Link>
           </span>
           <span>Logout</span>

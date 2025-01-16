@@ -104,7 +104,7 @@ $bg: rgb(216, 209, 209);
           }
         }
 
-        .write-post {
+        .write-navbar {
           background-color: $bg;
           padding: 5px 10px;
           // border-radius: 10px;
@@ -243,8 +243,8 @@ $bg: rgb(216, 209, 209);
           gap: 5px;
 
           img {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             cursor: pointer;
           }
         }
@@ -263,7 +263,7 @@ $bg: rgb(216, 209, 209);
         flex: 2;
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 20px;
 
         h1 {
           font-size: 24px;
@@ -298,6 +298,89 @@ $bg: rgb(216, 209, 209);
           &:hover {
             background-color: $bg;
             border: 1px solid white;
+          }
+        }
+      }
+    }
+
+    // Write page
+    .write {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+
+      .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: 1px solid lightgray;
+          font-family: inherit;
+        }
+
+        .editorContainer {
+          height: 300px;
+          overflow: scroll;
+          border: 1px solid lightgray;
+
+          .editor {
+            height: 100%;
+            border: none;
+          }
+        }
+      }
+
+      .menu {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .item {
+          border: 1px solid lightgray;
+          flex: 1;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          font-size: 12px;
+
+          h1 {
+            font-size: 20px;
+          }
+
+          .file {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+
+          .buttons {
+            display: flex;
+            justify-content: space-between;
+
+            :first-child {
+              cursor: pointer;
+              background-color: white;
+              color: black;
+              border: 1px solid $bg;
+              padding: 4px 6px;
+            }
+
+            :last-child {
+              cursor: pointer;
+              background-color: teal;
+              color: white;
+              border: 1px solid white;
+              padding: 4px 6px;
+            }
+          }
+          .cat {
+            display: flex;
+            gap: 2px;
+            align-items: center;
           }
         }
       }
