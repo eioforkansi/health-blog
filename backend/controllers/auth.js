@@ -28,8 +28,8 @@ export const register = (req, res) => {
 
 export const login = (req, res) => {
   // Check for user
-  const script = "SELECT * FROM users WHERE username = ?";
-  db.query(script, req.body.username, (err, data) => {
+  const script = "SELECT * FROM users WHERE email = ?";
+  db.query(script, req.body.email, (err, data) => {
     if (err) return res.json(err);
     if (data.length == 0) return res.status(404).json("User unavailable");
 
