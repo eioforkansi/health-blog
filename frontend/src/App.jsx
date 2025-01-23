@@ -7,6 +7,8 @@ import { Single } from "./pages/Single";
 import { Write } from "./pages/Write";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import Profile from "./pages/Profile";
+import Update from "./pages/Update";
 
 function Layout() {
   return (
@@ -28,6 +30,8 @@ function App() {
               <Route index element={<Home />} />
               <Route path="/post/:id" element={<Single />} />
               <Route path="/write" element={<Write />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/update/:id" element={<Update />} />
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />

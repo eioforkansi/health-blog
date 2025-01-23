@@ -28,26 +28,26 @@ export const Register = () => {
 
   return (
     <div className="authentication">
-      <h1>Register</h1>
+      <h1>REGISTER</h1>
       <form>
         <input
           required
           type="text"
-          placeholder="username"
+          placeholder="Full name"
           name="username"
           onChange={handleChange}
         />
         <input
           required
           type="text"
-          placeholder="email"
+          placeholder="Email"
           name="email"
           onChange={handleChange}
         />
         <input
           required
           type="password"
-          placeholder="password"
+          placeholder="Password"
           name="password"
           onChange={handleChange}
         />
