@@ -69,7 +69,7 @@ export default function Profile() {
     <div className="profile">
       <div className="container">
         <div className="profileImage">
-          <img src={`../upload/${user?.img}`} alt="" />
+          <img src={`../upload/${currentUser?.img}`} alt="" />
           <input
             type="file"
             name=""

@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+import AuthContext from "../context/authContext";
 
 export const Home = () => {
+  const { currentUser } = useContext(AuthContext);
+
   const [posts, setPosts] = useState([]);
   const cat = useLocation().search;
 
@@ -36,7 +39,16 @@ export const Home = () => {
                 <h1>{post.title}</h1>
               </Link>
               <p>{getText(post.desc)}</p>
-              <button>Read More</button>
+
+              {currentUser ? (
+                <button>
+                  <Link to={`/post/${post.id}`}>Read More</Link>
+                </button>
+              ) : (
+                <button>
+                  <Link to="/login">Read More</Link>
+                </button>
+              )}
             </div>
           </div>
         ))}

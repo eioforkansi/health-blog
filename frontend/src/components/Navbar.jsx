@@ -20,23 +20,23 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className="links">
-          <Link to="/?cat=art">
-            <h6>ART</h6>
+          <Link to="/?cat=meditation">
+            <h6>MEDITATION</h6>
           </Link>
-          <Link to="/?cat=science">
-            <h6>SCIENCE</h6>
+          <Link to="/?cat=wellness">
+            <h6>WELLNESS</h6>
           </Link>
-          <Link to="/?cat=technology">
-            <h6>TECHNOLOGY</h6>
+          <Link to="/?cat=nutrition">
+            <h6>NUTRITION</h6>
           </Link>
-          <Link to="/?cat=cinema">
-            <h6>CINEMA</h6>
+          <Link to="/?cat=fitness">
+            <h6>FITNESS</h6>
           </Link>
-          <Link to="/?cat=design">
-            <h6>DESIGN</h6>
+          <Link to="/?cat=yoga">
+            <h6>YOGA</h6>
           </Link>
-          <Link to="/?cat=food">
-            <h6>FOOD</h6>
+          <Link to="/?cat=cancer">
+            <h6>CANCER</h6>
           </Link>
           <span className="write-navbar">
             {currentUser ? (

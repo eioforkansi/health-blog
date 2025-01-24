@@ -48,4 +48,22 @@ export const getUser = (req, res) => {
   });
 };
 
+export const deleteUser = (req, res) => {
+  const token = req.cookies.accessToken;
+  if (!token) return res.status(401).json("Not authenticated");
+  jwt.verify(token, "secretkey", (err, userInfo) => {
+    if (err) return res.status(403).json("Token not valid");
+    console.log(userInfo.id, req.params.id);
+    if (userInfo.id !== parseInt(req.params.id, 10)) {
+      return res.status(403).json("You can only delete your account");
+    }
+    const script = "DELETE FROM users WHERE id = ?";
+    db.query(script, [userInfo.id], (err, data) => {
+      console.log(err);
+      if (err) return res.status(403).json("Error has occurred");
+      return res.status(200).json("Your account has been deleted");
+    });
+  });
+};
+
 export default router;

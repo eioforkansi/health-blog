@@ -1,6 +1,5 @@
 import Edit from "../img/edit.png";
 import Delete from "../img/delete.png";
-import noAvatar from "../img/noAvatar.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu } from "../components/Menu";
 import { useContext, useEffect, useState } from "react";
@@ -48,8 +47,8 @@ export const Single = () => {
         <div className="user">
           <img src={`../upload/${post?.userImg}`} alt="" />
           <div className="info">
-            <span>{post.username}</span>
-            <p>Posted {moment(post.date).fromNow()}</p>
+            <span>{post?.username}</span>
+            {/* <p>Posted {moment(post.date).fromNow(false)}</p> */}
           </div>
           {currentUser.username === post.username && (
             <div className="edit">
